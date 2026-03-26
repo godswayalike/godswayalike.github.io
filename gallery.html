@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <button class="sidebar-toggle" id="sidebarToggle">
+        <i class="fas fa-bars"></i>
+    </button>
+    <div class="page-container">
+        <div id="sidebarOverlay" class="sidebar-overlay"></div>
+        <!-- Navigation sidebar -->
+        <aside class="sidebar">
+            <nav>
+                <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+                <a href="about.html"><i class="fa-solid fa-receipt"></i> About Us</a>
+                <a href="#" class="active"><i class="fa-regular fa-user"></i>Gallery</a>
+                <a href="contact.html"><i class="fa-solid fa-address-book"></i> Contact Us</a>
+                <a href="order.html"><i class="fa-solid fa-truck-fast"></i> Order Page</a>
+            </nav>
+        </aside>
+<!-- Main Content Page -->
+        <main class="content">
+            <h2>Welcome To Our Gallery</h2>
+
+    <!-- Rollover Image -->
+    <div class="image-box">
+        <img src="https://via.placeholder.com/150/4CAF50/ffffff?text=Normal" 
+             alt="Rollover Image" 
+             class="rollover">
+    </div>
+
+    <!-- Hyperlinked Image -->
+    <div class="image-box">
+        <a href="https://www.example.com" target="_blank">
+            <img src="https://via.placeholder.com/150/2196F3/ffffff?text=Click+Me" 
+                 alt="Hyperlinked Image" 
+                 class="hyperlink">
+        </a>
+    </div>
+            
+        </main>
+        </div>
+
+    <script>
+        // Mobile menu toggle functionality
+        const sidebarToggle = document.getElementById('sidebarToggle');
+        const pageContainer = document.querySelector('.page-container');
+        const sidebarOverlay = document.querySelector('.sidebar-overlay');
+
+        sidebarToggle.addEventListener('click', () => {
+            pageContainer.classList.toggle('sidebar-open');
+        });
+
+        sidebarOverlay.addEventListener('click', () => {
+            pageContainer.classList.remove('sidebar-open');
+        });
+    </script>
+</body>
+</html>

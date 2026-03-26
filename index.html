@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <button class="sidebar-toggle" id="sidebarToggle">
+        <i class="fas fa-bars"></i>
+    </button>
+    <div class="page-container">
+        <div id="sidebarOverlay" class="sidebar-overlay"></div>
+        <aside class="sidebar">
+            <nav>
+                <a href="#" class="active"><i class="fa-solid fa-house"></i> Home</a>
+                <a href="about.html"><i class="fa-solid fa-receipt"></i> About Us</a>
+                <a href="profile.html" id="profileLink"><i class="fa-regular fa-user"></i> Gallery</a>
+                <a href="contact.html"><i class="fa-solid fa-address-book"></i> Contact Us</a>
+                <a href="order.html"><i class="fa-solid fa-truck-fast"></i> Order Page</a>
+                <!-- <a href="feed.html"><i class="fa-solid fa-headset"></i> News Letter</a> -->
+            </nav>
+        </aside>
+
+        <main class="content">
+          <!-- Profile Information Section -->
+            <h2>Meet The Members of Our Team And Their Profile Information</h2>
+
+        <div class="cards-container">
+                <div class="profile-card">
+                    <img src="images/adire-fabrics.webp" alt="Profile 1">
+                    <div class="card-info">
+                        <h3>Name: John Doe</h3>
+                        <p>Registration Number: BMAT/12345</p>
+                        <p>Email: john.doe@example.com</p>
+                        <p>Phone number: +1 234 567 890</p>
+                    </div>
+                </div>
+                
+                <div class="profile-card">
+                    <img src="https://via.placeholder.com/150" alt="Profile 2">
+                    <div class="card-info">
+                        <h3>Name: Jane Smith</h3>
+                        <p>Registration Number: BMAT/67890</p>
+                        <p>Email: jane.smith@example.com</p>
+                        <p>Phone number: +1 234 567 890</p>
+                    </div>
+                </div>
+                
+                <div class="profile-card">
+                    <img src="https://via.placeholder.com/150" alt="Profile 3">
+                    <div class="card-info">
+                        <h3>Name: Bob Johnson</h3>
+                        <p>Registration Number: BMAT/54321</p>
+                        <p>Email: bob.johnson@example.com</p>
+                        <p>Phone number: +1 234 567 890</p>
+
+                    </div>
+                </div>
+                
+                <div class="profile-card">
+                    <img src="https://via.placeholder.com/150" alt="Profile 4">
+                    <div class="card-info">
+                        <h3>Name: Alice Williams</h3>
+                        <p>Registration Number: BMAT/98765</p>
+                        <p>Email: alice.williams@example.com</p>
+                        <p>Phone number: +1 234 567 890</p>
+                    </div>
+                </div>
+                
+                <div class="profile-card">
+                    <img src="https://via.placeholder.com/150" alt="Profile 5">
+                    <div class="card-info">
+                        <h3>Name: David Brown</h3>
+                        <p>Registration Number: BMAT/11111</p>
+                        <p>Email: david.brown@example.com</p>
+                        <p>Phone number: +1 234 567 890</p>
+
+                    </div>
+                </div>
+            </div>
+
+            
+        </main>
+
+
+
+        </div>
+
+    <script>
+        // Mobile menu toggle functionality
+        const sidebarToggle = document.getElementById('sidebarToggle');
+        const pageContainer = document.querySelector('.page-container');
+        const sidebarOverlay = document.getElementById('sidebarOverlay');
+
+        sidebarToggle.addEventListener('click', () => {
+            pageContainer.classList.toggle('sidebar-open');
+        });
+
+        sidebarOverlay.addEventListener('click', () => {
+            pageContainer.classList.remove('sidebar-open');
+        });
+    </script>
+</body>
+</html>

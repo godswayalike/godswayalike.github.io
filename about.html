@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <button class="sidebar-toggle" id="sidebarToggle">
+        <i class="fas fa-bars"></i>
+    </button>
+    <div class="page-container">
+        <div id="sidebarOverlay" class="sidebar-overlay"></div>
+        <aside class="sidebar">
+            <nav>
+                <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+                <a href="#" class="active"><i class="fa-solid fa-receipt"></i> About Us</a>
+                <a href="profile.html"><i class="fa-regular fa-user"></i>Gallery</a>
+                <a href="contact.html"><i class="fa-solid fa-address-book"></i> Contact Us</a>
+                <a href="order.html"><i class="fa-solid fa-truck-fast"></i> Order Page</a>
+            </nav>
+        </aside>
+
+        <main class="content">
+            <h2>Our Mision And Vision Statement</h2>
+            <div class="mission">
+                <div class="mission-card">
+                    <h3>Our Mission</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum similique illo corporis molestiae, dolorum neque magnam, quos sed veniam sapiente natus vel ad eos tempora? Rem autem nemo molestiae officiis consequatur blanditiis repellat. Nesciunt, quod assumenda reprehenderit facilis minus rerum dignissimos, hic labore modi vitae fuga fugiat quasi delectus blanditiis?
+                    </p>
+                </div>
+
+                <div class="mission-card">
+                    <h3>Our Vision</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit, fugiat cupiditate quos modi quis suscipit aliquid magni laborum debitis maiores voluptatum ut autem esse quae? Dicta natus quisquam cumque sapiente rerum dignissimos est odit! Alias dolores ab excepturi, soluta nam amet natus debitis numquam assumenda quis? Enim accusantium architecto temporibus?
+                    </p>
+                </div>
+            </div>
+           
+                  <!-- ═══════════════════════════════════════
+       COMMUNITY TESTIMONIALS
+  ═══════════════════════════════════════ -->
+  <section class="community-section" id="community">
+    <div class="community-inner">
+      <h2 class="community-title">VOICES FROM THE COMMUNITY</h2>
+
+      <div class="testimonials-grid">
+
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <div class="testimonial-avatar">
+              <img src="images/Adaeze Okafor Image.png" alt="Adaeze Okafor"/>
+            </div>
+              <div class="testimonial-name">Customer 1</div>
+          </div>
+          <p class="testimonial-text">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit eaque commodi veniam hic excepturi quod? Numquam, ipsa! Repudiandae veniam unde culpa dolor quisquam beatae, enim optio asperiores? Quo, quia ipsa.."</p>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <div class="testimonial-avatar">
+              <img src="images/Amina Threads Image.png" alt="Kwame Mensah"/>
+            </div>
+              <div class="testimonial-name">Customer 2</div>
+          </div>
+          <p class="testimonial-text">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sunt eius, quidem reprehenderit dolor accusamus magni officiis eaque provident ipsa iusto ea autem dolore aliquam eos eum nostrum doloribus? In.."</p>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <div class="testimonial-avatar">
+              <img src="images/david Njo Image.png" alt="David Kipnge"/>
+            </div>
+              <div class="testimonial-name">Customer 3</div>
+          </div>
+          <p class="testimonial-text">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos assumenda aliquam libero nihil tenetur veritatis non, neque inventore repellat praesentium. A qui possimus unde voluptatem perferendis, itaque at consequatur. Dolorum.."</p>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <div class="testimonial-avatar">
+              <img src="images/Amino Diallo.png" alt="Amara Diallo"/>
+            </div>
+              <div class="testimonial-name">Customer 4</div>
+          </div>
+          <p class="testimonial-text">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam dicta, corrupti officiis nesciunt autem laudantium quisquam exercitationem optio nobis facere dolorum eius non voluptatibus dolorem et odit mollitia atque impedit!."</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+             
+        </main>
+
+
+
+        </div>
+
+    <script>
+        // Mobile menu toggle functionality
+        const sidebarToggle = document.getElementById('sidebarToggle');
+        const pageContainer = document.querySelector('.page-container');
+        const sidebarOverlay = document.getElementById('sidebarOverlay');
+
+        sidebarToggle.addEventListener('click', () => {
+            pageContainer.classList.toggle('sidebar-open');
+        });
+
+        sidebarOverlay.addEventListener('click', () => {
+            pageContainer.classList.remove('sidebar-open');
+        });
+    </script>
+</body>
+</html>
