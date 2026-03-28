@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <button class="sidebar-toggle" id="sidebarToggle">
+        <i class="fas fa-bars"></i>
+    </button>
+    <div class="page-container">
+        <div id="sidebarOverlay" class="sidebar-overlay"></div>
+        <aside class="sidebar">
+            <nav>
+                <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+                <a href="about.html"><i class="fa-solid fa-receipt"></i> About Us</a>
+                <a href="gallery.html" id="profileLink"><i class="fa-regular fa-user"></i> Gallery</a>
+                <a href="contact.html"><i class="fa-solid fa-address-book"></i> Contact Us</a>
+                <a href="#" class="active"><i class="fa-solid fa-truck-fast"></i> Products</a>
+            </nav>
+        </aside>
+
+        <main class="content">
+            <div class="welcome-header"><h1>Welcome To Ash Computers</h1></div>
+            <h3><em>"Discover Our Range of High-Quality Computer Products"</em></h3>
+           
+    <div class="container">
+        <!-- Invisible border table -->
+         <h3>Computer Products List</h3>
+        <table class="layout-table">
+            <tr>
+                <th>Laptops</th>
+                <th>Desktops</th>
+                <th>Tablets</th>
+                <th>Smartphones</th>
+            </tr>
+            <tr>
+                <td>HP Pavilion</td>
+                <td>Dell OptiPlex</td>
+                <td>iPad Air</td>
+                <td>iPhone 13</td>
+            </tr>
+            <tr>
+                <td>Lenovo ThinkPad</td>
+                <td>Acer Aspire Tower</td>
+                <td>Samsung Galaxy Tab</td>
+                <td>Tecno Phantom X</td>
+            </tr>
+            <tr>
+                <td>MacBook Air</td>
+                <td>iMac</td>
+                <td>Amazon Fire HD</td>
+                <td>Infinix Zero Ultra</td>
+            </tr>
+        </table>
+
+        <!-- Visible border table -->
+         <h3>Our Premium Products List</h3>
+        <table class="data-table">
+            
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Image</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>MacBook Air</td>
+                <td>Lightweight, powerful laptop with sleek design and fast performance.</td>
+                <td><img src="images/macBook-air.jpg" alt="Placeholder"></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>iMac</td>
+                <td>Stylish desktop featuring Retina display, powerful processors, creative performance.</td>
+                <td><img src="images/imac.webp" alt="Placeholder"></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>iPhone 15</td>
+                <td>Advanced smartphone with fast performance, sleek design, superior camera.</td>
+                <td><img src="images/iPhone-15.jpg" alt="Placeholder"></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Samsung Galaxy S25</td>
+                <td>Innovative smartphone offering brilliant display, AI tools, long battery.</td>
+                <td><img src="images/samsung-galaxy-s25.jpg" alt="Placeholder"></td>
+            </tr>
+        </table>
+    </div>
+
+<div>
+        <h2>Our Contact Information</h2>
+        <p><i class="fa-solid fa-location-dot"></i> 123 Tech Street, Accra, Ghana</p>
+        <p><i class="fa-solid fa-phone"></i> +233 243 927 133</p>
+        <p><i class="fa-solid fa-envelope"></i> info@ashcomputers.com</p>
+    </div>
+
+    <h3>
+        Connect with us on social media:
+        <a href="https://www.facebook.com/ashcomputers" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.twitter.com/ashcomputers" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/ashcomputers" target="_blank"><i class="fab fa-instagram"></i></a>
+    </h3>
+    <div>
+        <hr>
+        <p>&copy; 2023 Ash Computers. All rights reserved.</p>
+    </div>
+
+        </main>
+
+
+
+        </div>
+
+    <script>
+        // Mobile menu toggle functionality
+        const sidebarToggle = document.getElementById('sidebarToggle');
+        const pageContainer = document.querySelector('.page-container');
+        const sidebarOverlay = document.getElementById('sidebarOverlay');
+
+        sidebarToggle.addEventListener('click', () => {
+            pageContainer.classList.toggle('sidebar-open');
+        });
+
+        sidebarOverlay.addEventListener('click', () => {
+            pageContainer.classList.remove('sidebar-open');
+        });
+    </script>
+</body>
+</html>

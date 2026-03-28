@@ -47,7 +47,7 @@ body { background-color: var(--bg-color); color: var(--text-dark); }
     visibility: visible;
 }
 
-.page-container { display: flex; gap: 20px; padding: 0 20px; }
+.page-container { display: flex;  padding: 0 20px; }
 
 .sidebar {
     background: var(--white); width: 220px; border-radius: 20px; padding: 20px 0;
@@ -55,15 +55,13 @@ body { background-color: var(--bg-color); color: var(--text-dark); }
     height: 90vh; position: sticky; top: 20px; margin-top: 10px;
 }
 .sidebar nav a {
-    display: block; padding: 35px 25px; color: var(--text-dark); text-decoration: none; font-size: 14px; font-weight: 500; transition: 0.3s;
-}
+    display: block; padding: 35px 25px; color: var(--text-dark); text-decoration: none; font-size: 14px; font-weight: 500; transition: 0.3s; text-align: left;}
 
 .sidebar nav a i { width: 25px; color: var(--text-light); }
 
-.sidebar nav a.active { background: var(--primary-light); color: var(--primary); border-left: 4px solid var(--primary); }
+.sidebar nav a.active { background: var(--primary-light); color: var(--primary); border-left: 4px solid var(--primary); text-align: center; }
 
 .sidebar nav a.active i { color: var(--primary); }
-.sidebar-bottom a.active { background: var(--primary-light); color: var(--primary); border-left: 4px solid var(--primary); }
 
 .content { flex: 1; display: flex; flex-direction: column; gap: 20px; margin-bottom: 10px; }
 h2 { font-size: 25px; text-align: center; padding: 10px; color: var(--primary); }
@@ -128,9 +126,7 @@ h2 { font-size: 25px; text-align: center; padding: 10px; color: var(--primary); 
 }
 
 h2 {
-    color: #333;
-    text-align: center;
-}
+    color: #333; text-align: center;}
 
 form.contact-form {
     background: #fff;
@@ -262,11 +258,20 @@ button:hover {
     text-align: center;
 }
 
+.layout-table th {
+    background-color: var(--primary);
+    color: white;
+    padding: 15px;
+    text-align: center;
+    border: none;
+}
+
 /* Visible border table */
 .data-table {
     border-collapse: collapse;
-    width: 600px;
-    height: 300px;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
     background-color: var(--primary-light);
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
@@ -283,12 +288,38 @@ button:hover {
 }
 
 .data-table img {
-    width: 100px;
+    width: 100%;
+    max-width: 100px;
     height: auto;
     border-radius: 4px;
 }
 
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .data-table th, .data-table td {
+        padding: 5px;
+        font-size: 14px;
+    }
+    .data-table img {
+        max-width: 50px;
+    }
+}
+
 /* Rollover images */
+.rollover-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    justify-items: center;
+    align-items: start;
+    margin: 0 auto;
+    width: min(100%, 1080px);
+}
+
+.rollover-grid .image-box {
+    margin: 0;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f6f9;
@@ -303,7 +334,6 @@ h2 {
 
 /* Box model styling */
 .image-box {
-    display: inline-block;
     margin: 20px;
     padding: 15px;
     border: 2px solid #ccc;
@@ -314,21 +344,24 @@ h2 {
 
 /* Rollover effect */
 .rollover {
-    width: 150px;
-    height: 150px;
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
     transition: transform 0.3s, opacity 0.3s;
 }
 
 .rollover:hover {
     transform: scale(1.1); /* enlarge on hover */
     opacity: 0.8;          /* fade effect */
-    content: url("https://via.placeholder.com/150/f44336/ffffff?text=Hovered");
+    /* removed content URL swap to avoid missing-placeholder display issues */
 }
 
 /* Hyperlinked image styling */
 .hyperlink {
-    width: 150px;
-    height: 150px;
+    display: inline-block;
+    width: 500px;
+    height: 290px;
     border: 3px solid #2196F3;
     border-radius: 6px;
     transition: box-shadow 0.3s;
@@ -499,6 +532,52 @@ h2 {
     .welcome-header h2 {
         font-size: 24px;
         padding: 15px;
+    }
+
+    /* Fix horizontal overflow on mobile for product page */
+    .page-container,
+    body,
+    html {
+        overflow-x: hidden;
+        min-width: 0;
+    }
+
+    .content,
+    .container {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        padding: 0 12px;
+    }
+
+    .layout-table,
+    .data-table {
+        width: 100%;
+        max-width: 100%;
+        table-layout: fixed;
+        overflow-wrap: break-word;
+    }
+
+    .data-table th,
+    .data-table td {
+        font-size: 13px;
+        padding: 6px;
+    }
+
+    .data-table img {
+        max-width: 50px;
+        height: auto;
+    }
+
+    /* Rollover grid adjustments for mobile */
+    .rollover-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .rollover-grid .image-box {
+        margin: 10px 0;
     }
 
     /* Profile cards - stack vertically on mobile */
